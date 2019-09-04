@@ -1,0 +1,73 @@
+{
+	"name": "anniversary-landing-page",
+	"description": "NYT Marketing Anniversary Landing Page",
+	"license": "UNLICENSED",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nytm/mkt-landing"
+	},
+	"bugs": {
+		"url": "https://github.com/nytm/mkt-landing/issues"
+	},
+	"author": "Ethan Mehas",
+	"scripts": {
+		"modernizr": "gulp"
+	},
+	"dependencies": {
+		"jquery": "^3.4.1"
+	},
+	"devDependencies": {
+		"autoprefixer": "^7.1.6",
+		"browser-sync": "^2.26.7",
+		"css-mqpacker": "^6.0.1",
+		"cssnano": "^3.10.0",
+		"del": "^2.2.2",
+		"es6-shim": "^0.35.3",
+		"gulp": "^4.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-csso": "^2.0.0",
+		"gulp-debug": "^3.1.0",
+		"gulp-filter": "^5.0.1",
+		"gulp-if": "^2.0.2",
+		"gulp-iife": "^0.4.0",
+		"gulp-jshint": "^2.0.4",
+		"gulp-livereload": "^3.8.1",
+		"gulp-load-plugins": "^1.4.0",
+		"gulp-postcss": "^7.0.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^2.2.0",
+		"gulp-sass-unicode": "^1.0.1",
+		"gulp-sourcemaps": "^2.2.0",
+		"gulp-template": "^4.0.0",
+		"gulp-typescript": "^4.0.0-alpha.1",
+		"gulp-uglify": "^2.1.2",
+		"gulp-util": "^3.0.8",
+		"jshint": "^2.10.2",
+		"jshint-stylish": "^2.2.1",
+		"minimist": "^1.2.0",
+		"postcss": "^6.0.14",
+		"postcss-discard-duplicates": "^2.1.0",
+		"pump": "^2.0.1",
+		"stylelint": "^9.1.1",
+		"stylelint-order": "^0.8.1",
+		"stylelint-scss": "^2.4.0",
+		"typescript": "^2.6.2"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"prettier": {
+		"useTabs": true
+	},
+	"browserslist": [
+		"last 2 Chrome versions",
+		"last 2 ChromeAndroid versions",
+		"last 2 Firefox versions",
+		"last 2 Safari versions",
+		"last 2 Edge versions",
+		"last 2 Android versions",
+		"ie >= 11",
+		"iOS >= 10"
+	]
+}

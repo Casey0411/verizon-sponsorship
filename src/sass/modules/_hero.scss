@@ -1,0 +1,21 @@
+.hero{
+    width:100%;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 152px 40px 111px;  
+
+    &__content{
+        width: 100%;
+        max-width: 525px;
+        margin: 0 auto;
+
+        &__title{
+            
+
+        }
+
+    }
+
+}

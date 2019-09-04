@@ -1,0 +1,141 @@
+$pages: (
+	'home',
+	'general-info',
+	'contact',
+	'video'
+);
+$active-site-nav-color: map-get($colors, 'red');
+
+// Primary nav
+.site-nav {
+	background: #000;
+	border-style: none;
+	color: #fff;
+}
+
+// Primary nav menu
+.site-nav-menu {
+	margin-left: 100px;
+	@include breakpoint('md') {
+		margin-left: 185px;
+	}
+
+	&__link {
+		color: #fff;
+		transition-duration: 250ms;
+		transition-property: color;
+		transition-timing-function: ease-out;
+		&:hover {
+			color: map-get($colors, 'red');
+		}
+		&--active {
+			color: $active-site-nav-color;
+		}
+	}
+
+	@each $page in $pages {
+		@at-root {
+			.page--#{$page} &__link--#{$page} {
+				color: $active-site-nav-color;
+			}
+		}
+	}
+}
+
+// Primary site nav on home page when user has not scrolled past the intro
+#homecoming-float {
+	background: transparent;
+	border-style: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	.navbar-brand {
+		opacity: 0;
+	}
+
+	.navbar-nav > {
+		li > a {
+			// color: #fff;
+		}
+
+		.open > a,
+		li > a:hover,
+		.open > a:focus {
+			background: transparent;
+			color: #f00;
+		}
+	}
+
+	.dropdown-menu {
+		background: rgba(255, 0, 0, 0.6);
+		background-clip: padding-box;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 0;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+	}
+}
+
+.navbar-brand {
+	color: #fff;
+	font-family: $ff-sans;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 0.8;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+#siteNav {
+
+	.navbar-nav > li {
+		> a {
+			// color: #fff;
+
+			&:hover {
+				color: #f00;
+			}
+		}
+
+		&.open > a {
+			color: #f00;
+		}
+
+		&:first-of-type > a {
+			padding: 15px 15px 15px 0;
+		}
+	}
+	.dropdown-menu {
+		background: rgba(255, 0, 0, 0.65);
+		background-clip: padding-box;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 0;
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+	}
+}
+
+.navbar-nav > .open > a {
+	background-color: #000;
+	color: #555;
+
+	&:hover,
+	&:focus {
+		background-color: #000;
+		color: #555;
+	}
+}
+
+.dropdown-menu {
+	& > li > a:hover {
+		background: rgba(255, 0, 0, 1);
+		color: #fff;
+	}
+
+	& > li > a {
+		color: #fff;
+	}
+}

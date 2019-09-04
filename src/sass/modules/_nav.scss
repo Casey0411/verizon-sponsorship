@@ -1,0 +1,57 @@
+// Overrides for Bootstrap 3's Nav component
+.nav {
+	// list-style: none;
+	// margin-bottom: 0;
+	// padding-left: 0;
+
+	> li {
+		// display: block;
+		// position: relative;
+
+		> a {
+			// display: block;
+			// padding: 10px 15px;
+			// position: relative;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				// text-decoration: none;
+			}
+		}
+
+		&.disabled > a {
+			// color: #777;
+
+			&:hover,
+			&:focus {
+				// background-color: transparent;
+				// color: #777;
+				// cursor: not-allowed;
+				// text-decoration: none;
+			}
+		}
+	}
+
+	.open > a {
+		// background-color: #eee;
+		// border-color: #337ab7;
+
+		&:hover,
+		&:focus {
+			// background-color: #eee;
+			// border-color: #337ab7;
+		}
+	}
+
+	.nav-divider {
+		// background-color: #e5e5e5;
+		// height: 1px;
+		// margin: 9px 0;
+		// overflow: hidden;
+	}
+
+	> li > a > img {
+		// max-width: none;
+	}
+}

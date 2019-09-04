@@ -1,0 +1,19 @@
+/* Video container */
+// Contains youtube embedded player
+.video-container {
+	height: calc(100vw - (#{$grid-gutter-width}));
+	padding-bottom: 0;
+	position: relative;
+	@include breakpoint('sm') {
+		height: auto;
+		padding-bottom: percentage(9/16);
+	}
+
+	iframe {
+		@include embed-responsive-item;
+		height: calc(100vw - (#{$grid-gutter-width}));
+		@include breakpoint('sm') {
+			height: 100%;
+		}
+	}
+}

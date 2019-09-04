@@ -1,0 +1,21 @@
+/* Video container created by NYT in-house video player script ("VHS") */
+// the default style for the player is inline styles that are set by JS, so we must use !important to overwrite
+.nytd-player-container {
+	height: calc(100vw - (#{$grid-gutter-width})) !important;
+	padding-bottom: 0 !important;
+	@include breakpoint('sm') {
+		height: 0 !important;
+		padding-bottom: percentage(9/16) !important;
+	}
+
+	video {
+		height: calc(100vw - (#{$grid-gutter-width})) !important;
+		left: 50% !important;
+		transform: translateX(-50%);
+		width: auto !important;
+		@include breakpoint('sm') {
+			height: 100% !important;
+			// padding-bottom: inherit !important;
+		}
+	}
+}
