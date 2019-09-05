@@ -1,6 +1,239 @@
 .form-section {
     width:100%;
     padding: 40px 40px 80px; 
-    background: pink;       
+    background: #ffffff;
+
     
+
+    @include breakpoint("sm"){
+        padding: 69px 40px 68px; 
+    }
+
+    .container{
+        max-width: 920px;
+    }
+
+    .content{
+        max-width: 490px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto; 
+
+
+        &__paragraph{
+            font-family: $font-franklin;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 500;
+            margin: 0 0 20px;
+        }
+
+    }
+
+    .form-holder{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        .grid-container.fluid{
+            padding: 0;
+        }
+
+        .search-form{
+            max-width: 490px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto; 
+
+            input{
+                background-color: #EFEFEF;
+                border-radius: 3px;
+                font-family: $font-franklin;
+                font-size: 18px;
+                line-height: 1.25;
+                font-weight: 500;
+                color:#000000;  
+                text-align: left;
+                margin:0 auto ;
+                border:1px solid #979797;
+                width: 100%;
+            }
+
+            .cell{
+                width: 100%;
+                max-width:380px;
+                .small-10{
+                    width: 100%;
+                }
+
+                .small-10{
+                    width: 100%;
+                }
+
+
+
+            }
+
+        }
+
+        .results{
+            margin-top: 40px;
+            display: flex;
+            justify-content:center;
+            align-items: left;
+            flex-direction: row;
+            display: none;
+
+            &.show{ 
+                
+                @include breakpoint("sm"){
+                    display: flex !important;
+                }
+
+            }
+        }
+
+        .result{    
+            flex-basis: 250px;
+            margin-bottom: 20px;
+            display: flex;  
+            align-items: bottom;
+            flex-direction: column;
+        } 
+
+        .resultTitle{   
+            font-family: $font-franklin;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 500;
+            color: #333333;
+            margin: 0;
+        }
+
+        .resultAddress{
+            font-family: $font-franklin;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 500;
+            color: #333333;
+        }
+
+        .resultPhone{
+            font-family: $font-franklin;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 500;
+            color: #333333;
+        }
+
+        .button{
+            width: 111px;
+            color: #fff;
+            background-color: #2C2C2C;
+            font-family: $font-franklin;
+            font-size: 18px;
+            line-height: 1.25;
+            font-weight: 500;
+            border-radius: 3px;
+            padding: 10px 18px;
+            border: none;
+            outline: none;
+            margin-bottom: 0;
+
+
+            &.formTrigger{
+                width: 124px;
+                margin-top: 20px;
+                vertical-align: bottom;
+            }
+
+        }
+
+        .registrationForm{      
+            max-width: 490px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto; 
+
+            .cell{
+                padding: 0;
+                width: 100%;
+
+                .medium-6{
+                    padding: 0;
+                    width: 100%;
+                }
+
+                &__ip{
+                    margin: 0 0 20px;
+
+                    a{
+                        font-family: $font-franklin;
+                        font-size: 18px;
+                        line-height: 1.25;
+                        font-weight: 500;
+                        color: #595959;
+                        text-decoration: underline;
+                    }
+                }
+
+                &__city{    
+                    width: 70%; 
+                    max-width: 325px;
+                    margin-right: 5%;
+                }
+
+                &__state{
+                    width: 30%;
+                    max-width: 181px;
+                }
+
+            }
+
+            label{
+                font-family: $font-franklin;
+                font-size: 18px;
+                line-height: 1.25;
+                font-weight: 500;
+                color: #333333;
+                display: none;
+
+                &.textarea-label{
+                    display: block;
+                }
+
+                &.terms-condition{
+                    display: block;
+                }   
+            }   
+
+            input[type="text"], input[type="email"]{
+                background-color: #EFEFEF;
+                border-radius: 3px;
+                font-family: $font-franklin;
+                font-size: 18px;
+                line-height: 1.25;
+                font-weight: 500;
+                color:#000000;  
+                text-align: left;
+                margin:0 auto 20px;
+                border:1px solid #979797;
+                width: 100%;
+
+                .cell_ip &{
+                    margin:0 auto;
+                }
+
+
+            }
+
+            textarea{
+                min-height: 120px;
+            }
+
+        }
+
+    }      
+
 }

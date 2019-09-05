@@ -1,7 +1,9 @@
 // Variables
 // Type
-$ff-franklin: 'nyt-franklin', 'Helvetica Neue', Arial, sans-serif;
-$ff-cheltenham: 'nyt-cheltenham', georgia, 'times new roman', times, serif;
+$ff-franklin: 'franklin','nyt-franklin', 'Helvetica Neue', Arial, sans-serif;
+$font-franklin: $ff-franklin;
+$ff-cheltenham: 'cheltenham','nyt-cheltenham', georgia, 'times new roman', times, serif;
+$font-cheltenham: $ff-cheltenham;
 $ff-base: 'Helvetica Neue', Helvetica, Arial, 'Open Sans', sans-serif;
 $ff-sans: $ff-franklin;
 $ff-serif: $ff-cheltenham;

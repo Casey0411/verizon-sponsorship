@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="content/components/proxy-assets/foundation.min.css" />
-<link rel="stylesheet" href="content/components/proxy-assets/app.css" />
+
 
 <script>
 
@@ -29,7 +28,7 @@
 
                 $('#results').empty();                    
 
-                $('#results').show();
+                $('#results').show().addClass("show");
 
                 $('#registrationForm input').each(function() {
                     $(this).not('#vertical, #sub-vertical').val('');
@@ -144,7 +143,7 @@
         $('#schoolPhone').val(data.phone).attr('readonly',true);
         $('#schoolID').val(data.id).attr('readonly',true);
 
-        $('#results').hide();
+        $('#results').hide().removeClass("show");
         $('#registrationForm').show();
         $('#notListed').hide();
 
@@ -169,18 +168,18 @@
                 <form name="search" id="search-form" class="search-form">
                     <div class="grid-x grid-margin-x">
                         <div class="cell small-10">
-                            <label for="zip">Search by Zip Code</label>
+                            <!-- <label for="zip">Search by Zip Code</label> -->
                             <input type="search" name="zip" id="zip" placeholder="11012" />
                         </div>
                         <div class="cell small-2 search-btn-container">
-                            <button class="button">Go</button>
+                            <button class="button">Search</button>
                         </div>
                     
                     </div>
                 </form>
 
 
-                <ul id="results" class="grid-x grid-margin-x">
+                <ul id="results" class="grid-x grid-margin-x results">
 
                 </ul>
 
@@ -193,7 +192,7 @@
 
                 </div>
                             
-                <form id="registrationForm" action="http://www2.nytimesgroupsubscriptions.com/l/146041/2019-08-14/24wzpb" style="display: none;" method="post">
+                <form id="registrationForm" action="http://www2.nytimesgroupsubscriptions.com/l/146041/2019-08-14/24wzpb" style="display: none;" method="post" class="registrationForm">
                     
                     <fieldset>
                         <legend>Teacher Information<br />
@@ -203,37 +202,38 @@
                         <div class="grid-x grid-padding-x">
                             <div class="cell medium-6">
                                 <label for="firstName">First Name</label>
-                                <input type="text" name="First_Name" id="firstName" required />
+                                <input type="text" name="First_Name" id="firstName" required placeholder="First Name" />
                             </div>
                         
                             <div class="cell medium-6">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" name="Last_Name" id="lastName" required />
+                                <input type="text" name="Last_Name" id="lastName" required placeholder="Last Name"/>
                             </div>
                         </div>
                 
                         <div class="grid-x grid-padding-x">
                             <div class="cell medium-6">
                                 <label for="title">Title</label>
-                                <input type="text" name="Title" id="title" required />
+                                <input type="text" name="Title" id="title" required placeholder="Title"/>
                             </div>
                             <div class="cell medium-6">
                                 <label for="email">Email Address</label>
-                                <input type="email" name="email" id="email" required />
+                                <input type="email" name="email" id="email" required placeholder="Email Address"/>
                             </div>
                         </div>
 
                         <div class="grid-x grid-padding-x">
-                            <div class="cell">
+                            <div class="cell cell_ip">
                                 <label for="ipAddress">IP Address <a href="https://www.whatsmyip.org" target="_blank">Find your IP Address</a></label>
-                                <input type="text" name="IP_Addresses_Ranges" id="ipAddress" required />
+                                <input type="text" name="IP_Addresses_Ranges" id="ipAddress" required placeholder="IP Address" />
+                                <a href="https://www.whatsmyip.org" target="_blank" >Find your IP Address</a>
                             </div>
             
                         </div>
 
                         <div class="grid-x grid-padding-x">
                             <div class="cell">
-                                <label for="ipAddress">How did you hear about this program?</label>
+                                <label for="ipAddress" class="textarea-label">How did you hear about this program?</label>
                                 <textarea name="Referral_Source" id="referral"></textarea>
                             </div>
                 
@@ -247,49 +247,51 @@
                         <div class="grid-x grid-padding-x">
                             <div class="cell">
                                 <label for="schoolName">School Name</label>
-                                <input type="text" name="Title_1_High_School_Name" id="schoolName" required />
+                                <input type="text" name="Title_1_High_School_Name" id="schoolName" required placeholder=""/>
                             </div>
                         </div>
                 
                         <div class="grid-x grid-padding-x">
                             <div class="cell">
                                 <label for="schoolAddress">School Address</label>
-                                <input type="text" name="School_Street_Address" id="schoolAddress" required />
+                                <input type="text" name="School_Street_Address" id="schoolAddress" required placeholder="School Address"/>
                             </div>
 
-                            <div class="cell medium-4">
+                            <div class="cell medium-4 cell__city">
                                 <label for="schoolCity">City</label>
-                                <input type="text" name="School_City" id="schoolCity" required />
+                                <input type="text" name="School_City" id="schoolCity" required placeholder="City"/>
                             </div>
         
-                            <div class="cell medium-2">
+                            <div class="cell medium-2 cell__state">
                                 <label for="schoolState">State</label>
-                                <input type="text" name="School_State" id="schoolState" required />
+                                <input type="text" name="School_State" id="schoolState" required placeholder="State"/>
                             </div>
                             
                             <div class="cell medium-2">
                                 <label for="schoolZip">Zip</label>
-                                <input type="text" name="School_Zip_Code" id="schoolZip" required />
+                                <input type="text" name="School_Zip_Code" id="schoolZip" required placeholder=""/>
                             </div>
 
                             <div class="cell medium-4">
                                 <label for="schoolPhone">Phone Number</label>
-                                <input type="tel" name="Phone_Number" id="schoolPhone" required />
+                                <input type="tel" name="Phone_Number" id="schoolPhone" required placeholder=""/>
                             </div>
                             
-                    </div>        
+                        </div>        
                     </fieldset>
                 
                     <div class="grid-x grid-padding-x">
-                        <div class="cell">
-                            <input type="checkbox" name="terms-agree" id="termsAgree" /><label for="termsAgree">I agree to the <a href="#terms">terms &amp; conditions</a></label>
-                        </div>
                         <div class="cell">
                             <input type="hidden" name="School_ID" id="schoolID" />
                             <input type="hidden" name="Vertical" id="vertical" value="Education" />
                             <input type="hidden" name="SubVertical" id="sub-vertical" value="K12 - Private - Individual School" />
                             <button id="registerSubmit" type="submit" class="button" disabled>Register</button>
                         </div>
+
+                        <div class="cell">
+                            <input type="checkbox" name="terms-agree" id="termsAgree" /><label for="termsAgree" class="terms-condition">I agree to the <a href="#terms">terms &amp; conditions</a></label>
+                        </div>
+
                     </div>
                 
                 </form>

@@ -1,34 +1,191 @@
-// Site footer
-footer {
-	float: left;
-	text-align: left;
-}
+footer.footer {
+    background-color: #252527;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 50px 40px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    margin-bottom: -18px;
+    .container {
+      width: 100%;
+      height: auto;
+      max-width: 980px;
+      clear: both;
+      margin: 0 auto;
+    }
+    .col {
+      width: 25%;
+      float: left;
+      padding: 0 20px 0 0;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .logo {
+      margin: 0 0 15px;
+      clear: both;
+      display: inline-block;
+      width: 100%;
+      max-width: 214px;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      font-family: "nyt-franklin", helvetica,arial,sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.38;
+    }
+    .col h3 {
+      font-family: "nyt-franklin", helvetica,arial,sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.88;
+      margin: 0 0 5px;
+      position: relative;
+      button.footer_toggle {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+        z-index: 100;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        outline: none;
+      }
+      i {
+        display: none;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        background-color: #4a4a4a;
+        color: #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        cursor: pointer;
+        line-height: 22px;
+        svg {
+          g.footer_plus {
+            /*fill: rgba(255, 255, 255, 0.3);*/
+            path {
+              /*fill: rgba(255, 255, 255, 0.3);*/
+            }
+          }
+          /*fill: rgba(255, 255, 255, 0.3);*/
+        }
+      }
+    }
+    svg g.footer_plus {
+      /*fill: rgba(255, 255, 255, 0.3);*/
+      path {
+        /*fill: rgba(255, 255, 255, 0.3);*/
+      }
+    }
+  }
+  
+  h3 i svg {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+  
+  footer.footer .col h3.active i {
+    svg {
+      g.footer_plus {
+        fill: #ffffff;
+        path {
+          fill: #ffffff;
+        }
+      }
+      fill: #ffffff;
+    }
+    fill: #ffffff;
+  }
+  
+  .footer_links {
+    width: 100%;
+    display: block;
+    > a {
+      font-family: "nyt-franklin", helvetica,arial,sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      width: auto;
+      display: inline-block;
+      margin: 0 0 5px;
+      padding: 5px 0;
+      box-sizing: border-box;
+      clear: both;
+      text-decoration: none;
+      &:hover {
+        padding: 5px 0 4px;
+        border-bottom: 1px solid #fff;
+		color: #ffffff;	
+      }
+    }
+  }
+  
+  footer.footer p.mobile_copyright {
+    padding: 20px 0 0;
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    footer.footer .footer_links {
+      display: block !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    footer.footer {
+      padding: 50px 20px;
+      .col {
+        width: 100%;
+        padding: 0;
+        float: none;
+        clear: both;
+        &:last-of-type {
+          border-bottom: 1px solid #4a4a4a;
+        }
+        > p {
+          display: none;
+        }
+        h3 {
+          padding: 10px 0;
+          border-top: 1px solid #4a4a4a;
+          i {
+            display: block;
+          }
+        }
+      }
+    }
+    .footer_links {
+      display: none;
+      padding: 0 0 10px;
+    }
+    footer.footer {
+      > p.mobile_copyright {
+        display: block;
+      }
+      .col h3 button.footer_toggle {
+        display: block;
+        outline: none;
+      }
+    }
+  }
 
-footer h5,
-.site-footer__copyright {
-	color: #666;
-	display: inline;
-	font-weight: 500;
-}
-
-footer a {
-	color: #000;
-	font-family: $ff-sans;
-	font-size: 15px;
-	font-weight: 500;
-	margin: 0 0 0 7px;
-	text-decoration: underline;
-}
-
-footer a:focus,
-footer a:hover {
-	color: #000;
-	outline: none;
-}
-
-.closeBg {
-	height: 100%;
-	position: absolute;
-	width: 100%;
-	z-index: 0;
-}
+  body > img, body > iframe{
+    display: none;
+  }

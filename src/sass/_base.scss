@@ -9,8 +9,16 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	margin: 0;
 
-	a {
+	a {	
 		color: #000;
+		&:hover{
+			color: #000;
+			cursor: pointer;
+		}
+
+		&:focus{
+			color: #000;
+		}
 	}
 }
 
@@ -28,6 +36,11 @@ img {
 
 svg {
 	height: auto;
+
+	&:hover{
+		color: #000;
+		fill: #000;
+	}
 }
 
 .container{

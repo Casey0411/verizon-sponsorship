@@ -22,13 +22,24 @@
         max-width: 320px;   
         width: 100%;
         margin: 0 auto;
-        display: flex;
-        justify-content: center;    
+        text-align: center;
+
+        @include breakpoint("sm"){
+            display: flex;
+            justify-content: center;
+        }
     }   
 
     .nyt-logo{
         max-width: 190px;
+        max-height: 25px;   
         display: block;
+        margin: 0 auto;
+
+        @include breakpoint("sm"){
+            margin: 0;
+        }
+
 
         .pageHeaderWithMenu__nytLogo__svg{
             width: 100%;
@@ -39,16 +50,32 @@
         .universalNav__logo__graphic{
             width: 100%;
             max-width: 190px;  
-            max-height: 24px;            
+            max-height: 24px; 
+
+            @include breakpoint("sm"){
+                max-height: 24px; 
+            }
+
         }
 
     }
 
     .sponsor-logo{
-        width: auto;
-        padding-left: 15px;
-        margin-left: 15px;
-        border-left: 1px solid #000;
+        width: 100%;
+        margin-top: 10px;
+
+        @include breakpoint("sm"){
+            margin-top: 0;
+            width: auto;
+            padding-left: 15px;
+            margin-left: 15px;
+            border-left: 1px solid #000;
+        }
+
+        img{
+            margin: 0 auto;
+        }
+
     }
 
 
