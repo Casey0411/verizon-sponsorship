@@ -45,7 +45,7 @@
 		"gulp-util": "^3.0.8",
 		"jshint": "^2.10.2",
 		"jshint-stylish": "^2.2.1",
-		"minimist": "^1.2.0",
+		"minimist": "^1.2.2",
 		"postcss": "^6.0.14",
 		"postcss-discard-duplicates": "^2.1.0",
 		"pump": "^2.0.1",
