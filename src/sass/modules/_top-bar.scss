@@ -13,6 +13,11 @@
     left: 0;
     z-index: 200;
 
+    .highschoolAccess &{
+        background-color: transparent;
+        top: 30px;
+    }
+
     .container{
         width: 100%;
         max-width: 490px;
@@ -24,43 +29,65 @@
         margin: 0 auto;
         text-align: center;
 
+        .highschoolAccess &{
+            display: flex;
+            justify-content: center; 
+        }
+
         @include breakpoint("sm"){
             display: flex;
-            justify-content: center;
+            justify-content: center;    
         }
     }   
 
     .nyt-logo{
-        max-width: 190px;
+        max-width: 188px;
         max-height: 25px;   
         display: block;
         margin: 0 auto;
+        color: #000;
 
-        @include breakpoint("sm"){
+        .highschoolAccess &{
             margin: 0;
+            max-width: 164px;
+
+            @include breakpoint("sm"){
+                max-width: 190px; 
+            }
         }
 
+        @include breakpoint("sm"){  
+            margin: 0;
+        }
 
         .pageHeaderWithMenu__nytLogo__svg{
             width: 100%;
             max-width: 190px; 
-            max-height: 24px;      
+            max-height: 26px;      
         }
 
         .universalNav__logo__graphic{
             width: 100%;
             max-width: 190px;  
-            max-height: 24px; 
+            max-height: 26px; 
 
             @include breakpoint("sm"){
-                max-height: 24px; 
+                max-height: 26px; 
+            }
+
+            .highschoolAccess &{
+                max-width: 164px;
+
+                @include breakpoint("sm"){
+                    max-width: 190px; 
+                }
             }
 
         }
 
     }
 
-    .sponsor-logo{
+    .sponsor-logo, .verizon-logo{
         width: 100%;
         margin-top: 10px;
 
@@ -72,8 +99,33 @@
             border-left: 1px solid #000;
         }
 
-        img{
+        .highschoolAccess &{
+            margin-top: 0;
+            width: auto;
+            padding-left: 8px;
+            margin-left: 8px;
+            border-left: 1px solid #000;
+
+            @include breakpoint("sm"){
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+
+        }
+
+        img{    
             margin: 0 auto;
+
+            .highschoolAccess &{
+                vertical-align: top;
+
+                @include breakpoint("sm"){
+                    max-width: 100px;
+                    width: 100%;
+                }
+
+            }
+
         }
 
     }

@@ -1,30 +1,66 @@
 .hero{
     width:100%;
-    background-image: url(../img/hero-mobile.jpg);
+    background-image: url(https://mwcm.nyt.com/dam/LP/verizon-sponsorship-page/img/hero-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: top center;
-    background-color: #F4C871;
+    background-color: #F0F3F7;
     padding: 380px 20px 50px;
+
+    .highschoolAccess &{
+        background-image: none;
+        padding: 170px 20px 70px;
+
+        @media (min-width: 440px){
+            padding: 50% 20px 30%;
+        }
+    
+        @include breakpoint("xs"){
+            padding: 174px 40px 135px;
+            background-position: center;
+            background-image: url(https://mwcm.nyt.com/dam/LP/verizon-sponsorship-page/img/hero.jpg);
+        }
+
+    }
 
     @media (min-width: 440px){
         padding: 90% 20px 50px;
     }
 
     @include breakpoint("xs"){
-        padding: 152px 40px 111px;
+        padding: 174px 40px 135px;
         background-position: center;
-        background-image: url(../img/hero.jpg);
+        background-image: url(https://mwcm.nyt.com/dam/LP/verizon-sponsorship-page/img/hero.jpg);
     }
 
     .container{
         max-width: 600px;
+
+        .highschoolAccess &{
+            max-width: 740px;   
+        }
     }  
 
     &__content{   
         width: 100%;
-        max-width: 600px;
+        max-width: 550px;
         margin: 0 auto;
+
+        .highschoolAccess &{
+            max-width: 740px;
+        }
+
+        .limited-copy{
+            font-family: $font-franklin;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #333333;
+            margin: 0 auto 20px;
+        }
 
         &__title{
             font-family: $font-cheltenham;
@@ -36,6 +72,23 @@
             text-align: center;
             max-width: 340px;
             margin: 0 auto;
+
+           
+
+            .highschoolAccess &{
+
+                br{
+                    display: none;
+
+                    @include breakpoint("sm"){
+                        display: block;   
+                    }
+                }
+
+                @include breakpoint("xs"){
+                    max-width: 740px;    
+                }
+            }
 
             @include breakpoint("xs"){
                 max-width: 600px;  
@@ -56,15 +109,36 @@
             letter-spacing: -0.01;
             text-align: center;
             margin: 26px auto 0;
-            max-width: 200px;
+            max-width: 340px;
+
+            .highschoolAccess &{
+                max-width: 540px;
+                font-weight: 500;
+
+                .mobile-one-line{
+                    display: block;
+
+                    @include breakpoint("sm"){
+                        display: inline-block;
+                    }
+                }
+
+                @include breakpoint("xs"){
+                    max-width: 540px;
+                }
+    
+                @include breakpoint("sm"){
+                    font-size: 20px;
+                }
+            }
 
             @include breakpoint("xs"){
-                max-width: 600px;  
+                max-width: 340px;  
             }
 
             @include breakpoint("sm"){
                 font-size: 20px;
-            }
+            }   
         }
 
     }

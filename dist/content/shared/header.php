@@ -1,4 +1,4 @@
-<?php
+<?php	
 /**
  * Global Header
  */
@@ -10,16 +10,16 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta content="TheTimesCenter" property="og:title">
-		<meta content="TheTimesCenter.com" property="og:site_name">
-		<meta content="" property="og:image">
+		<meta name="description" content="Thanks to our partnership with Verizon, Title 1 high schools can now receive free New York Times digital subscriptions while connected to their school networks.">
+		<meta content="NYT School Access" property="og:title">
+		<meta content="nytimes.com/schoolaccess" property="og:site_name">
+		<meta content="https://nytimesgroupsubscriptions.com/schoolaccess/assets/img/NYT-School-Access.jpg" property="og:image">
 		<meta content="website" property="og:type">
-		<meta content="" property="og:url">
-		<meta content="T" property="og:description">
+		<meta content="nytimes.com/schoolaccess" property="og:url">
+		<meta content="Thanks to our partnership with Verizon, Title 1 high schools can now receive free New York Times digital subscriptions while connected to their school networks." property="og:description">
 		<meta name="google-site-verification" content="lIBSA1XE-e8EgsgJxJj7bQnXo7_y-8PLVzJ1hoslhlU" />
 
-		<title>Verizon Sponsorship</title>
+		<title>NYT School Access</title>
 
 		<link rel="shortcut icon" href="https://static01.nyt.com/favicon.ico" />
 
@@ -31,11 +31,27 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="assets/js/bootstrap.js"></script>
 		<script src="https://cdn.optimizely.com/public/3013110282/s/gm.js"></script>
-		<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
 		
 		<?php //include 'shared/cookie-consent.php' ?>
 		<?php // Tracking ?>
 		<?php //include 'tracking.php' ?>
+
+		<script>
+            /* Google Analytics */
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-104393356-1', 'auto');
+            ga('send', 'pageview');
+        </script>
 
 		<script type="text/javascript">
 		piAId = '147041';
@@ -53,7 +69,11 @@
 		})();
 		</script>
 
+		<script>
+			window.location.href = "http://www.nytimes.com/highschoolaccess";	
+		</script>
+
 	</head>
-	<body class="<?php //bodyClass($pageTitle); ?>" style="background: #ccc;">
+	<body class="<?php //bodyClass($pageTitle); ?>" style="background: #ccc; display: none;">
 		<?php include 'content/components/top-nav.php' ?>
 
