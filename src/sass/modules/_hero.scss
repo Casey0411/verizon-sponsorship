@@ -7,7 +7,7 @@
     background-color: #F0F3F7;
     padding: 380px 20px 50px;
 
-    .highschoolAccess &{
+    .highschoolAccess &{    
         background-image: none;
         padding: 170px 20px 70px;
 
@@ -37,7 +37,7 @@
         max-width: 600px;
 
         .highschoolAccess &{
-            max-width: 740px;   
+            max-width: 1000px;   
         }
     }  
 
@@ -47,7 +47,7 @@
         margin: 0 auto;
 
         .highschoolAccess &{
-            max-width: 740px;
+            max-width: 1000px;
         }
 
         .limited-copy{
@@ -70,12 +70,14 @@
             color:#000000;  
             letter-spacing: -0.06;
             text-align: center;
-            max-width: 340px;
+            max-width: 322px;
             margin: 0 auto;
 
            
 
             .highschoolAccess &{
+                font-size: 35px;
+                line-height: 40px;
 
                 br{
                     display: none;
@@ -86,8 +88,14 @@
                 }
 
                 @include breakpoint("xs"){
-                    max-width: 740px;    
+                    max-width: 780px;  
                 }
+
+                @include breakpoint("sm"){
+                    line-height: 45px;
+                    
+                }
+
             }
 
             @include breakpoint("xs"){
@@ -102,8 +110,8 @@
 
         &__text{
             font-family: $font-franklin;
-            font-size: 18px;
-            line-height: 1;
+            font-size: 20px;
+            line-height: 25px;
             font-weight: 600;
             color:#000000;  
             letter-spacing: -0.01;
@@ -141,6 +149,6 @@
             }   
         }
 
-    }
+    }   
 
 }
